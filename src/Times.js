@@ -22,15 +22,14 @@ return (
       data && !loading ?
       <h3>
         Sunrise: {data.results.sunrise}
-        <br><br />
+        <br></br>
         Sunset: {data.results.sunset}
-        <br><br />
+        <br></br>
         Dawn: {data.results.dawn}
-        <br><br />
+        <br></br>
         Dusk: {data.results.dusk}
-        <br><br />
+        <br></br>
         Golden Hour: {data.results.golden_hour}
-      <br />
       < /h3>
       :
       <p>loading...</p>
