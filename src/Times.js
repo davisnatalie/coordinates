@@ -30,7 +30,7 @@ return (
         Dusk: {data.results.dusk}
         <br><br />
         Golden Hour: {data.results.golden_hour}
-      </h3>
+      < /h3>
       :
       <p>loading...</p>
     }
