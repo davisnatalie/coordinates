@@ -20,17 +20,33 @@ return (
   <div>
     {
       data && !loading ?
-      <h3>
-        Sunrise: {data.results.sunrise}
-        <br></br>
-        Sunset: {data.results.sunset}
-        <br></br>
-        Dawn: {data.results.dawn}
-        <br></br>
-        Dusk: {data.results.dusk}
-        <br></br>
-        Golden Hour: {data.results.golden_hour}
-      < /h3>
+      <h4>
+      <table class="tg" align="center">
+        <tbody>
+          <tr>
+            <td class="tg-lqy6">Sunrise:</td> 
+            <td class="tg-baqh">{data.results.sunrise}</td>
+          </tr>
+          <tr>
+            <td class="tg-lqy6">Sunset:</td> 
+            <td class="tg-baqh">{data.results.sunset}</td>
+          </tr>
+          <tr>
+            <td class="tg-lqy6">Dawn:</td> 
+            <td class="tg-baqh">{data.results.dawn}</td>
+          </tr>
+          <tr>
+            <td class="tg-lqy6">Dusk:</td>
+            <td class="tg-baqh">{data.results.dusk}</td>
+             
+          </tr>
+          <tr>
+            <td class="tg-lqy6">Golden Hour:</td> 
+            <td class="tg-baqh">{data.results.golden_hour}</td>
+          </tr>
+        </tbody>
+      </table>
+      </h4>
       :
       <p>loading...</p>
     }

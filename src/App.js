@@ -3,7 +3,9 @@ import React, { useState } from 'react';
 import useAxios from './hooks/useAxios';
 import Place from './Place';
 import Times from './Times';
+import Weather from './Weather';
 import SearchInput from './SearchInput';
+import Date from './Date';
 
 function App() {
   const [searchPlace, setSearchPlace] = useState("")
@@ -28,12 +30,21 @@ function App() {
   return (
     <div className="App">
       <header>
-         <SearchInput handleSubmit={handleSubmit} searchPlace={searchPlace} setSearchPlace={setSearchPlace}  />
+
+        <Date />
+        
+        <SearchInput handleSubmit={handleSubmit} searchPlace={searchPlace} setSearchPlace={setSearchPlace}  />
       
         <Place loading={loading} data={data} place={place} error={error} setLatLng={setLatLng}/>
 
-        {data && <Times info={data} isLoading={loading} latLng={latLng}/>}
-
+        <div className="container">
+        <div className="time">
+          {data && <Times info={data} isLoading={loading} latLng={latLng}/>}
+        </div>
+        <div className="weather">
+          {data && <Weather wdata={data} wLoading={loading} latLng={latLng}/>}
+        </div>
+        </div>
 
       </header>
     </div>

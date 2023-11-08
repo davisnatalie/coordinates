@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 // import useFetch from "./hooks/useFetch";
 
+
 function Location({loading, data, place, error, setLatLng}) {
 
     useEffect(() => {
@@ -15,7 +16,7 @@ function Location({loading, data, place, error, setLatLng}) {
 
     // This should display before any place is searched for
     if(!place){
-        return <h1>Search for a place</h1>
+        return <h2>Please enter a location to find the local weather.</h2>
     }
 
     // This only displays between searching and getting back either data or error
@@ -35,10 +36,9 @@ function Location({loading, data, place, error, setLatLng}) {
         let Lng = data.results[0].geometry.location.lng
         return (  
             <>
+
                 <h1>{data.results[0].formatted_address}</h1>
-
                 <br />
-
                 <div>
                     Latitude: {Lat}
                     <br></br>
