@@ -6,6 +6,7 @@ import Times from './Times';
 import Weather from './Weather';
 import SearchInput from './SearchInput';
 import Date from './Date';
+import Local from './Local';
 
 function App() {
   const [searchPlace, setSearchPlace] = useState("")
@@ -37,6 +38,8 @@ function App() {
       
         <Place loading={loading} data={data} place={place} error={error} setLatLng={setLatLng}/>
 
+        {data && <Local ldata={data} lLoading={loading} latLng={latLng}/>}
+        
         <div className="container">
         <div className="time">
           {data && <Times info={data} isLoading={loading} latLng={latLng}/>}

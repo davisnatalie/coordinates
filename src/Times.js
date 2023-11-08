@@ -1,6 +1,6 @@
 // import useFetch from "./hooks/useFetch";
 // import Place from "./Place";
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import useAxios from './hooks/useAxios';
 
 function Times({info, isLoading, latLng}) {   

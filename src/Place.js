@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 // import useFetch from "./hooks/useFetch";
 
-
 function Location({loading, data, place, error, setLatLng}) {
 
     useEffect(() => {
@@ -36,9 +35,10 @@ function Location({loading, data, place, error, setLatLng}) {
         let Lng = data.results[0].geometry.location.lng
         return (  
             <>
-
                 <h1>{data.results[0].formatted_address}</h1>
+
                 <br />
+
                 <div>
                     Latitude: {Lat}
                     <br></br>
