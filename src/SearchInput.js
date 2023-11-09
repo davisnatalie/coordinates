@@ -17,6 +17,9 @@ function SearchInput({handleSubmit, searchPlace, setSearchPlace}) {
                 value={searchPlace}
                 onChange={(e) => test(e)}
             />
+            <br></br>
+            <br></br>
+            <button class="button" type="submit">Search</button>
         </form>
     );
 }

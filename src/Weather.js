@@ -17,13 +17,39 @@ function Weather({wdata, wLoading, latLng}) {
       if(error){
         return <h1>An error has occured</h1>
     }
+      // const weatherData = [{
+      //     title: 'Temp:',
+      //     titleData: data.main.temp,
+      //   },
+      //     {title: 'Feel',
+      //     titleData: data.main.feels_like,
+      //   },
+      //     {title: 'Min:',
+      //     titleData: data.main.temp_min,
+      //   },
+      //   {title: 'Max:',
+      //   titleData: data.main.temp_max,
+      // }]
 
+      // console.log('weather:', weatherData)
 
 return (
   <div>
     {
       data && !loading ?
       <h4>
+        {/* <table className="table caption-top">
+              <tbody>
+                {weatherData.map((data, i) => {
+                  return (
+                    <tr key={i}>
+                      <td>{data.title}</td>
+                      <td>{data.titleData}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table> */}
       <table class="tg" align="center">
         <tbody>
           <tr>
@@ -32,24 +58,24 @@ return (
           </tr>
           <tr>
             <td class="tg-lqy6">Temp:</td> 
-            <td class="tg-baqh">{data.main.temp}K</td>
+            <td class="tg-baqh">{data.main.temp}</td>
           </tr>
           <tr>
             <td class="tg-lqy6">Feels Like:</td> 
-            <td class="tg-baqh">{data.main.feels_like}K</td>
+            <td class="tg-baqh">{data.main.feels_like}</td>
           </tr>
           <tr>
             <td class="tg-lqy6">Temp Min:</td>
-            <td class="tg-baqh">{data.main.temp_min}K</td>
+            <td class="tg-baqh">{data.main.temp_min}</td>
           </tr>
           <tr>
             <td class="tg-lqy6">Temp Max:</td> 
-            <td class="tg-baqh">{data.main.temp_max}K</td>
+            <td class="tg-baqh">{data.main.temp_max}</td>
           </tr>
         </tbody>
       </table>
-      <br></br>
-      <button>Celsius</button> <button>Fahrenheit</button>
+      {/* <br></br>
+      <button class="button" id="C">Celsius</button> <button class="button"  id="F">Fahrenheit</button> */}
       </h4>
       :
       <p>loading...</p>

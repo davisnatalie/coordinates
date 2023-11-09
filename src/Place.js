@@ -11,7 +11,7 @@ function Location({loading, data, place, error, setLatLng}) {
 
             setLatLng({ Lat, Lng })
         }
-    }, [loading, data])
+    }, [])
 
     // This should display before any place is searched for
     if(!place){
@@ -36,9 +36,7 @@ function Location({loading, data, place, error, setLatLng}) {
         return (  
             <>
                 <h1>{data.results[0].formatted_address}</h1>
-
                 <br />
-
                 <div>
                     Latitude: {Lat}
                     <br></br>

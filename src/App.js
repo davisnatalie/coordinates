@@ -27,6 +27,10 @@ function App() {
     //   console.log(`place: ${place}`)
     // }, 5000)
   }
+
+  function refreshPage() {
+    window.location.reload(false);
+  }
   return (
     <div className="App">
       <header>
@@ -38,14 +42,18 @@ function App() {
         <Place loading={loading} data={data} place={place} error={error} setLatLng={setLatLng}/>
         
         <div className="container">
-        <div className="time">
-          {data && <Times info={data} isLoading={loading} error={error} latLng={latLng}/>}
+          <div className="time">
+            {data && <Times info={data} isLoading={loading} error={error} latLng={latLng}/>}
+          </div>
+          <div className="weather">
+            {data && <Weather wdata={data} wLoading={loading} error={error} latLng={latLng}/>}
+          </div>
         </div>
-        <div className="weather">
-          {data && <Weather wdata={data} wLoading={loading} error={error} latLng={latLng}/>}
-        </div>
-        </div>
+  
+          <button class="button" onClick={refreshPage}>New Search</button>
 
+<br></br>
+<br></br>
       </header>
     </div>
   );
