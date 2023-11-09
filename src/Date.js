@@ -65,25 +65,17 @@ console.log(timelyGreeting);
 
 // Today's Date
 
-// Let's concatenate today's date from other Date Object time units.
 
-// 20. Get today's date, which is an integer frorm 0-31:
 let date = dateTime.getDate(); 
 console.log('date', date); // 10 (for the 10th)
 
-// 21. Get the month, which is a number from 0-11, where Jan is 0:
 let month = dateTime.getMonth();
 console.log('month', month); // 4 (for May)
 
-// 22. Get the month as a string (January, February, etc). This gives us the flexibility to use the month as either a number or a day:
 let fullMonth = dateTime.toLocaleString('default', {month:'long'});
-console.log('fullMonth', fullMonth); 
 
-// 23. Get the day of the week as a number from 0-6; Sunday is 0
 let day = dateTime.getDay();
-console.log('day', day); 
 
-// 24. Make an array of the days of the week.
 let daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 let dayOfWeek = daysOfTheWeek[day];

@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 // import useFetch from "./hooks/useFetch";
 
 function Location({loading, data, place, error, setLatLng}) {

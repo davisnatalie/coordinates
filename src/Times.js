@@ -15,7 +15,10 @@ function Times({info, isLoading, latLng}) {
   if(isLoading && !info){
       return <h1>Loading...</h1>
   }
-
+    // This displays if you search for an incorrect place/term
+    if(error){
+      return <h1>An error has occured</h1>
+  }
 return (
   <div>
     {

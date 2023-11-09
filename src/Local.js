@@ -10,9 +10,15 @@ function Local({ldata, lLoading, latLng}) {
     setLoading(true)
   }, [])
 
-  if(lLoading && !ldata){
-      return <h1>Loading...</h1>
-  }
+    // This only displays between searching and getting back either data or error
+    if(loading && !data){
+        return <h1>Loading...</h1>
+    }
+
+    // This displays if you search for an incorrect place/term
+    if(error){
+        return <h1>An error has occured</h1>
+    }
 
 return (
   <div>

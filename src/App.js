@@ -37,15 +37,15 @@ function App() {
         <SearchInput handleSubmit={handleSubmit} searchPlace={searchPlace} setSearchPlace={setSearchPlace}  />
       
         <Place loading={loading} data={data} place={place} error={error} setLatLng={setLatLng}/>
-
-        {data && <Local ldata={data} lLoading={loading} latLng={latLng}/>}
+{/* 
+        {data && <Local ldata={data} lLoading={loading} error={error} latLng={latLng}/>} */}
         
         <div className="container">
         <div className="time">
-          {data && <Times info={data} isLoading={loading} latLng={latLng}/>}
+          {data && <Times info={data} isLoading={loading} error={error} latLng={latLng}/>}
         </div>
         <div className="weather">
-          {data && <Weather wdata={data} wLoading={loading} latLng={latLng}/>}
+          {data && <Weather wdata={data} wLoading={loading} error={error} latLng={latLng}/>}
         </div>
         </div>
 
