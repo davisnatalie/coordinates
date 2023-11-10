@@ -4,7 +4,7 @@ import useAxios from './hooks/useAxios';
 function Weather({wdata, wLoading, latLng}) {   
 
   const [setUrl, data, loading, setLoading, error] = useAxios()
-  
+
   const [isCelsius, setIsCelsius] = useState(true);
 
   useEffect(() => {
@@ -34,7 +34,6 @@ function Weather({wdata, wLoading, latLng}) {
       // }]
 
       // console.log('weather:', weatherData)
-
 
   const toggleTemperatureUnit = () => {
     setIsCelsius((prevIsCelsius) => !prevIsCelsius);

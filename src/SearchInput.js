@@ -1,27 +1,27 @@
-// This component can be plugged in anywhere, but the following must be set up on the parent component:
-// 1. a function called 'handleSubmit' that uses the search Place
-// 2. const [searchPlace, setSearchPlace] = useState("")
+import React from 'react';
 
-// When using this component, you must hand down props like this:
-// <SearchInput handleSubmit={handleSubmit} searchWord={searchWord} setSearchWord={setSearchWord} />
+function SearchInput({ handleSubmit, searchPlace, setSearchPlace }) {
+  const test = (e) => {
+    setSearchPlace(e.target.value);
+  };
 
-function SearchInput({handleSubmit, searchPlace, setSearchPlace}) {
-    function test(e) {
-        // console.log(searchPlace)
-        setSearchPlace(e.target.value)
-    }
-    return (  
-        <form onSubmit={(e) => handleSubmit(e)}>
-            <input 
-                type="text"
-                value={searchPlace}
-                onChange={(e) => test(e)}
-            />
-            <br></br>
-            <br></br>
-            <button class="button" type="submit">Search</button>
-        </form>
-    );
+  const handleResetForm = () => {
+    // Reload the page
+    window.location.reload();
+  };
+
+  return (
+    <div>
+      <form onSubmit={(e) => handleSubmit(e)}>
+        <input type="text" value={searchPlace} onChange={(e) => test(e)} />
+        <br />
+        <br />
+        <button class="button" type="submit" onChange={(e) => test(e)}>Search</button>
+        
+        <button class="button" type="button" onClick={handleResetForm}> Reset Form </button>
+      </form>
+    </div>
+  );
 }
 
 export default SearchInput;

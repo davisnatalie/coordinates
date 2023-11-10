@@ -63,7 +63,7 @@ p {
   word-break:normal;
 }
 
-.tg .tg-baqh{
+.tg .tg-baqh .tg-baqh2{
   text-align:center;
   vertical-align:top
 }
@@ -83,6 +83,8 @@ p {
 	padding:5px 10px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #3d768a;
+  margin: 10px;
+  align-items: center;
 }
 .button:hover {
 	background-color:#408c99;
