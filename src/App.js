@@ -45,12 +45,13 @@ function App() {
           <div className="time">
             {data && <Times info={data} isLoading={loading} error={error} latLng={latLng}/>}
           </div>
+          <div> </div>
+          <div> </div>
           <div className="weather">
             {data && <Weather wdata={data} wLoading={loading} error={error} latLng={latLng}/>}
           </div>
         </div>
-  
-          <button class="button" onClick={refreshPage}>New Search</button>
+
 
 <br></br>
 <br></br>
